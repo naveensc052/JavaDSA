@@ -71,7 +71,7 @@ public class PairSumTarget1 {
 	private static void hashmapMethod(int[] elements, int target, int size) {
 		// TODO Auto-generated method stub
 		System.out.println("HaspMap Method");
-		Map<Integer, Integer> map = new HashMap();
+		Map<Integer, Integer> map = new HashMap<>();
 		for(int i =0; i<size; i++) {
 			if(map.containsKey(target - elements[i])) {
 				System.out.printf("Pair = %d, %d", elements[map.get(target - elements[i])], elements[i]);
