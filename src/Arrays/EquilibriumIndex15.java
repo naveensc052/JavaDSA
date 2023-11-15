@@ -1,3 +1,4 @@
+package Arrays;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -18,7 +19,7 @@ public class EquilibriumIndex15 {
 		}
 		// Algorithm Function for finding Equilibrium Index
 		equilibriumpoint(nums,size);
-
+		scan.close();
 	}
 
 	private static void equilibriumpoint(int[] nums, int size) {
