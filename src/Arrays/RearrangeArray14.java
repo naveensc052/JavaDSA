@@ -22,6 +22,7 @@ public class RearrangeArray14 {
 		System.out.println("Before:- " + Arrays.toString(nums));
 		rearrange(nums,size);
 		System.out.println("After:-  " + Arrays.toString(nums));
+		scan.close();
 	}
 
 	private static void rearrange(int[] nums, int size) {

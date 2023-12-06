@@ -46,6 +46,4 @@ public class InplacemergeSort10 {
 			nums2[j-1] = first;
 		}
 	}
-
-
 }

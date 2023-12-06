@@ -19,6 +19,7 @@ public class Subset {
         }
         Subset(list, 0, new ArrayList<>(), ans);
         System.out.println(ans);
+        scan.close(); 
     }
 
     private static void Subset(List<Integer> list, int index, List<Integer> current, List<List<Integer>> ans){
