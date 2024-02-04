@@ -1,7 +1,5 @@
 package Trie;
 
-import Trie.Main.Node;
-
 /*
  * Finding the longest string in wordssuch that every prefix of it is also in word
  */

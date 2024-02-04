@@ -14,8 +14,9 @@ public class minCOIN {
 		
 		System.out.println(mincoins(n,a,dp)+"\n\n");
 		for(int x:dp) {
-			System.out.println(x);
+			System.out.print(x + " ");
 		}
+		System.out.println("\n"+coinchange2(a, 3, n));
 	}
 	
 	public static int mincoins(int n, int a[],int dp[]) {
@@ -37,5 +38,28 @@ public class minCOIN {
 			}
 		}
 		return dp[n]=ans;
+	}
+	public static int coinchange2(int[] nums, int size, int target){
+		int[][] dp = new int[size+1][target+1];
+		for(int i=0; i<=target; i++){
+			dp[0][i] = Integer.MAX_VALUE-1;
+			if(i!=0 && i%nums[0] == 0){
+				dp[1][i] = i/nums[0];
+			}
+			else if(i!=0 && i%nums[0] != 0){
+				dp[1][i] = Integer.MAX_VALUE-1;
+			}
+		}
+		for(int i=2; i<=size; i++){
+			for(int j=1; j<=target; j++){
+				if(nums[i-1]<=j){
+					dp[i][j] = Math.min(1+dp[i][j-nums[i-1]], dp[i-1][j]);
+				}
+				else{
+					dp[i][j] = dp[i-1][j];
+				}
+			}
+		}
+		return dp[size][target];
 	}
 }

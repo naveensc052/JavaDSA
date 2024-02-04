@@ -10,7 +10,6 @@ public class ValidPalindrome {
 		System.out.println("Enter the String");
 		String A = scan.next();
 		System.out.println(A);
-		int len = A.length();
 		if(isvalid(A)) {
 			System.out.println("Valid Palindrome");
 		}

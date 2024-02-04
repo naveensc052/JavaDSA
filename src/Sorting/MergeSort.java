@@ -4,8 +4,7 @@ import java.util.*;
 public class MergeSort {
 	
 	public static void sort(int[] elements, int low, int mid, int high) {
-		int[] b = new int[high-low + 1];
-		int i= low; 
+	
 	}
 	
 	public static void merge(int[] elements, int low, int high) {
@@ -28,7 +27,7 @@ public class MergeSort {
 			elements[i] = ele;
 		}
 		merge(elements,0,n-1);
-		
+		scan.close();
 	}
 
 }

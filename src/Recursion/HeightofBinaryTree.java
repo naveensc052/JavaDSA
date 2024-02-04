@@ -30,6 +30,7 @@ public class HeightofBinaryTree {
 			root = addNode(root,x);
 		}
 		System.out.println("MaxHeight of the root is " + height(root));
+		scan.close();
 	}
 	public static Node addNode(Node root, int data) {
 		if(root == null) {

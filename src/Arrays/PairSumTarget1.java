@@ -8,7 +8,6 @@ import java.util.Scanner;
 public class PairSumTarget1 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Size: ");
 		int size = scan.nextInt();
@@ -30,7 +29,6 @@ public class PairSumTarget1 {
 	}
 
 	private static void bruteforce(int[] elements, int target, int size) {
-		// TODO Auto-generated method stub
 		System.out.println("Brute Force Method");
 		
 		for(int i=0; i<size; i++ ) {
@@ -45,7 +43,6 @@ public class PairSumTarget1 {
 	}
 
 	private static void sortingMethod(int[] elements, int target, int size) {
-		// TODO Auto-generated method stub
 		System.out.println("Sorting Method");
 		Arrays.sort(elements);
 		int leftpointer = 0;
@@ -69,7 +66,7 @@ public class PairSumTarget1 {
 	}
 	
 	private static void hashmapMethod(int[] elements, int target, int size) {
-		// TODO Auto-generated method stub
+
 		System.out.println("HaspMap Method");
 		Map<Integer, Integer> map = new HashMap<>();
 		for(int i =0; i<size; i++) {

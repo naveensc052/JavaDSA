@@ -18,6 +18,7 @@ public class MinSubarraySum32 {
 		System.out.print("Enter the Target:- ");
 		int target = scan.nextInt();
 		System.out.println("Min Length Subarray satisfying given condition is " + minSubArrayLen(target,nums));
+		scan.close();
 	}
 	public static int minSubArrayLen(int target, int[] nums) {
         int cur = 0;

@@ -17,19 +17,19 @@ public class Subset {
             int x = scan.nextInt();
             list.add(x);
         }
-        Subset(list, 0, new ArrayList<>(), ans);
+        subset(list, 0, new ArrayList<>(), ans);
         System.out.println(ans);
         scan.close(); 
     }
 
-    private static void Subset(List<Integer> list, int index, List<Integer> current, List<List<Integer>> ans){
+    private static void subset(List<Integer> list, int index, List<Integer> current, List<List<Integer>> ans){
         if (index == list.size()) {
             ans.add(new ArrayList<>(current));
             return;
         }
         current.add(list.get(index));
-        Subset(list, index + 1, current, ans);
+        subset(list, index + 1, current, ans);
         current.remove(current.size() - 1);
-        Subset(list, index + 1, current, ans);
+        subset(list, index + 1, current, ans);
     }
 }

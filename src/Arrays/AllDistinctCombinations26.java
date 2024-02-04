@@ -9,7 +9,6 @@ import java.util.Set;
 public class AllDistinctCombinations26 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Size:- ");
 		int size = scan.nextInt();
@@ -28,7 +27,6 @@ public class AllDistinctCombinations26 {
 	}
 
 	private static void findAllCombinations(int[] nums, int i, int len, Set<List<Integer>> set, List<Integer> list) {
-		// TODO Auto-generated method stub
 		if(len == 0) {
 			set.add(new ArrayList<>(list));
 			return;

@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Binarysort4 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Size: ");
 		int size = scan.nextInt();

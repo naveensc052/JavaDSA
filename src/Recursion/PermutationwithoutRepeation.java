@@ -24,6 +24,7 @@ public class PermutationwithoutRepeation {
 				Arrays.sort(nums);
 				solution(nums,size, visited, list, result);
 				System.out.println(result);
+				scan.close();
 			}
 
 			private static void solution(int[] nums, int size, boolean[] visited, List<Integer> list,

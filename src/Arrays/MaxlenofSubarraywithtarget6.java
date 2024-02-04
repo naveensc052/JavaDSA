@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class MaxlenofSubarraywithtarget6 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter the Size: ");
 		int size = scan.nextInt();
@@ -27,7 +26,6 @@ public class MaxlenofSubarraywithtarget6 {
 	}
 
 	private static void bruteforce(int[] nums, int size, int target) {
-		// TODO Auto-generated method stub
 		int max = 0;
 		int startindex = -1;
 		int endindex = -1;

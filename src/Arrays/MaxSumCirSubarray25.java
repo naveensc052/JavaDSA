@@ -18,6 +18,7 @@ public class MaxSumCirSubarray25 {
 		}
 		// Algorithm
 		maxSubArray(nums);
+		scan.close();
 	}
 	public static void maxSubArray(int[] nums) {
         int startindex = -1;

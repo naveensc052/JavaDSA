@@ -22,6 +22,7 @@ public class ReverseStack {
 		System.out.println("Before:- " + stack);
 		Reverse(stack);
 		System.out.println("After:- " + stack);
+		scan.close();
 	}
 
 	private static void Reverse(Stack<Integer> stack) {

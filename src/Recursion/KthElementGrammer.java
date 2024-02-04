@@ -12,6 +12,7 @@ public class KthElementGrammer {
 		int k = scan.nextInt();
 		int ans  = kthGrammar(n,k);
 		System.out.println("Answer is " + ans);
+		scan.close();
 	}
 	public static int kthGrammar(int n, int k) {
         int ans = Recursion(n, k);

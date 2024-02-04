@@ -22,6 +22,7 @@ public class DeleteMiddleElement {
 		System.out.println("Before:- " + stack);
 		DeleteusingRecursion(stack,stack.size()/2 + 1);
 		System.out.println("After:- " + stack);
+		scan.close();
 	}
 
 	private static void DeleteusingRecursion(Stack<Integer> stack, int size) {

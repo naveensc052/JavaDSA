@@ -1,6 +1,5 @@
 package Trie;
 
-import Trie.Main.Node;
 
 public class LongestSubstring {
 

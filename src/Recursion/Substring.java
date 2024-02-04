@@ -13,6 +13,7 @@ public class Substring {
 		List<String> ans = new ArrayList<>();
 		ans = AllSubStringRecursion(A);
 		System.out.println(ans);
+		scan.close();
 	}
 	
 	public static List<String> AllSubStringRecursion(String A){

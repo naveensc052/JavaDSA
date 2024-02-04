@@ -16,6 +16,7 @@ public class SortusingRecursion {
         sortusingRecursion(nums, size, 0);
         
         System.out.println("Sorted Array: " + Arrays.toString(nums));
+        scan.close();
     }
 
     private static void sortusingRecursion(int[] nums, int size, int index) {

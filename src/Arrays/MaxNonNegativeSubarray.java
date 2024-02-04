@@ -17,6 +17,7 @@ public class MaxNonNegativeSubarray {
 			nums[i] = value;
 		}
 		solution(nums,size);
+		scan.close();
 	}
 
 	private static void solution(int[] nums, int size) {

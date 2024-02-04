@@ -10,6 +10,7 @@ public class print1ton {
 		System.out.print("Enter the number:- ");
 		int n = scan.nextInt();
 		recursion(n);
+		scan.close();
 	}
 
 	private static void recursion(int n) {

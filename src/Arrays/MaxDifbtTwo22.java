@@ -18,6 +18,7 @@ public class MaxDifbtTwo22 {
 		// Brute Force Approach
 		bruteforce(nums, size);
 		getMaxDiff(nums);
+		scan.close();
 	}
 
 	private static void bruteforce(int[] nums, int size) {

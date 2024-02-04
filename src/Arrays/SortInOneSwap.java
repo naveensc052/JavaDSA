@@ -18,6 +18,7 @@ public class SortInOneSwap {
 		}
 		sortArray(nums,size);
 		System.out.println(Arrays.toString(nums));
+		scan.close();
 	}
 
 	private static void sortArray(int[] nums, int size) {
