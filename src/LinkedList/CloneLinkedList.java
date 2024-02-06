@@ -58,6 +58,18 @@ public class CloneLinkedList {
  
         return newList;
     }
-
+    // Using Dummy Node
+    public static Node CloneUsingDummy(Node head){
+        Node dummy = new Node();
+        Node current = head;
+        Node tail;
+        tail = dummy;
+        while(current != null){
+            tail.next = new Node(current.data, tail.next);
+            tail = tail.next;
+            current = current.next;
+        }
+        return dummy.next;
+    }
 
 }
