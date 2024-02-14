@@ -60,7 +60,17 @@ public class RottenOrange {
                 visited[row][col+1] = 2;
             }
         }
+        for(int i=0; i<n; i++){
+            for(int j=0; j<m; j++){
+                if(grid[i][j] == 1 && visited[i][j] != 2){
+                    ans = -1;
+                    i = n;
+                    break;
+                }
+            }
+        }
         System.out.println("Time Required is " + ans);
+        scan.close();
 
     }
 }
