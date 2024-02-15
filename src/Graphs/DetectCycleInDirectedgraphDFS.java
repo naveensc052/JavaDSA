@@ -1,12 +1,11 @@
 package Graphs;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Scanner;
 
-
-public class CheckForBipartite {
+public class DetectCycleInDirectedgraphDFS {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
@@ -23,36 +22,31 @@ public class CheckForBipartite {
             }
             else{
                 adj.get(x).add(y);
-                adj.get(y).add(x);
             }
         }
-        boolean[] ans = {true};
         boolean[] visited = new boolean[n+1];
-        int[] colors = new int[n+1];
-        Arrays.fill(colors, -1);
-        dfs(adj, visited, 1, ans, 0, colors); // Connected Components and more then 1 Using for loop
-        if(ans[0]){
-            System.out.println("It is a Bipartite Graph");
-        }else{
-            System.out.println("It is NOT A BIPARTITE GRAPH");
+        HashSet<Integer> set = new HashSet<>();
+        boolean[] ans = {false};
+        for(int i=1; i<=n; i++){
+            if(!set.contains(i)){
+                dfs(adj, visited, i, set, ans);
+            }
         }
+        System.out.println(ans[0]); // true is Cycle is present else false
         scan.close();
     }
 
-    private static void dfs(List<List<Integer>> adj, boolean[] visited, int src, boolean[] ans, int color, int[] colors) {
+    private static void dfs(List<List<Integer>> adj, boolean[] visited, int src, HashSet<Integer> set, boolean[] ans) {
         visited[src] = true;
-        colors[src] = color;
+        set.add(src);
         for(int i:adj.get(src)){
-            if(!visited[i] && ans[0]){
-                dfs(adj, visited, i, ans, color == 0 ? 1:0 , colors);
+            if(!visited[i] && !set.contains(i) && !ans[0]){
+                dfs(adj, visited, i, set, ans);
             }else{
-                if(colors[i] == color){
-                    ans[0] = false;
-                    break;
-                }
+                if(visited[i])
+                    ans[0] = true;
             }
         }
+        visited[src] = false;
     }
-
-    
 }
