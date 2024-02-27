@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EventualSafeNodes {
-    private static boolean dfsCheck(int node, List<List<Integer>> adj, int vis[], 
-    int pathVis[], int check[]) {
+    private static boolean dfsCheck(int node, List<List<Integer>> adj, int vis[], int pathVis[], int check[]) {
         vis[node] = 1;
         pathVis[node] = 1;
         check[node] = 0;
