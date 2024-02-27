@@ -30,7 +30,7 @@ public class CheckForBipartite {
         boolean[] visited = new boolean[n+1];
         int[] colors = new int[n+1];
         Arrays.fill(colors, -1);
-        dfs(adj, visited, 1, ans, 0, colors); // Connected Components and more then 1 Using for loop
+        dfs(adj, visited, 1, ans, 0, colors); // Connected Components are more than 1 Use for loop
         if(ans[0]){
             System.out.println("It is a Bipartite Graph");
         }else{
