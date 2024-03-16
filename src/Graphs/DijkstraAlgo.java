@@ -2,6 +2,7 @@ package Graphs;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Scanner;
@@ -36,7 +37,8 @@ public class DijkstraAlgo {
 		Arrays.fill(dist, Integer.MAX_VALUE);
 		int src = 0;
 		dist[src] = 0;
-		
+		int[] pred = new int[n];
+		Arrays.fill(pred, src);
 		PriorityQueue<PairList> pq = new PriorityQueue<PairList>((x,y) -> x.first - y.first);
 		pq.add(new PairList(0,src));
 		while(pq.size() != 0) {
@@ -54,12 +56,27 @@ public class DijkstraAlgo {
                 // push it into the queue.
                 if(dis + edgeWeight < dist[adjNode]) {
                     dist[adjNode] = dis + edgeWeight; 
+                    pred[adjNode] = node; 
                     pq.add(new PairList(dist[adjNode], adjNode)); 
                 }
             }
         }
-		
-		
+		System.out.println("Precedence Array is " + Arrays.toString(pred));
+		for(int i=0; i<n; i++) {
+			if(i != src) {
+				List<Integer> path = new ArrayList<>();
+				System.out.println("path From " + src + " -> " + i + " is:- ");
+				int node = i;
+		        // o(N)
+		        while(pred[node] != node) {
+		            path.add(node); 
+		            node = pred[node]; 
+		        }
+		        path.add(src);
+		        Collections.reverse(path);
+		        System.out.println(path);
+			}
+		}
 		for(int i=0; i<n; i++) {
 			dist[i] = dist[i] == Integer.MAX_VALUE ? -1 : dist[i];
 		}
