@@ -23,8 +23,9 @@ public class ZeroOneMatrix {
             {0, 1, 1}
         };
 
-        Solution solution = new Solution();
-        int[][] result = solution.updateMatrix(matrix);
+
+        int[][] result = Solution1.updateMatrix(matrix);
+
 
         // Print the result or perform further operations
         for (int[] row : result) {
@@ -34,10 +35,12 @@ public class ZeroOneMatrix {
             System.out.println();
         }
     }
+
 }
 
-class Solution {
-    public int[][] updateMatrix(int[][] mat) {
+class Solution1 {
+    public static int[][] updateMatrix(int[][] mat) {
+
         int n = mat.length;
         int m = mat[0].length;
         int[][] distance = new int[n][m];
@@ -78,4 +81,8 @@ class Solution {
 
         return distance;
     }
+
 }
+
+
+
